@@ -25,6 +25,8 @@ affiliations:
 date: 13 August 2017
 bibliography: paper.bib
 
+---
+
 # Summary
 
 The forces on stars, galaxies, and dark matter under external gravitational
