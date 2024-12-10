@@ -25,12 +25,6 @@ affiliations:
 date: 13 August 2017
 bibliography: paper.bib
 
-# Optional fields if submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
-aas-journal: Astrophysical Journal <- The name of the AAS journal.
----
-
 # Summary
 
 The forces on stars, galaxies, and dark matter under external gravitational
@@ -72,6 +66,12 @@ In stage 3, flow exiting the intake enters the isolator. First, the isolator app
 The verification of the intake design and analysis module of the full propulsive path investigation methodology introduced in this study is performed by means of comparative numerical simulations of higher fidelity and the capability of the design approach to represent physically realizable intakes is demonstrated in comparison to experimental studies \cite{cakir2022}. The design parameters for the intake contours are provided as boundary conditions to the numerical simulations directly to assess the validity of the streamtraced contours in terms of providing the desired flow field properties. The numerical investigations included a mesh independency analysis. Accordingly, a mesh convergence history is extracted to document the convergence of the computed performance parameters with the values indicated by the reduced order analysis. The proposed reduced order model yielded results with a maximum of $\sim$1\% deviation from the values predicted by RANS in terms of intake exit Mach number ($\epsilon(M_{C,I})$=0.26\%), mass flow rate ($\epsilon(\dot{m}_{air})$=1.35\%), total pressure recovery ($\epsilon(TPR)$=0.81\%), compression pressure ratio ($\epsilon(CPR)$=1.21\%), and temperature ratio ($\epsilon(TR)$=0.41\%).
 
 The validation of the combustor and nozzle analysis module is conducted by comparing the predicted flow properties with the experimental and numerical data provided by Torrez \textit{et al.} \cite{torrez2011reduced}. Throughout the experiments conducted on a dual-mode ramjet combustor, the facility is operated in ramjet mode during which pressure measurements along the combustor and isolator sections are acquired. The corresponding experimental data is utilized for the validation studies of the MASIV code, developed for solving flow within ramjet and scramjet engines using various reduced-order approaches. Additionally, higher order numerical investigations are performed using the Ansys Fluent commercial code for comparison with the MASIV results. The results obtained with MASIV code, Fluent and the experimental campaigns are compared against the ones provided by the methodology of the present study under similar boundary and operating conditions. Although any fuel-air mixing model is not defined in the combustor module of the present work, the results of pressure drop, Mach number increase and temperature rise were perfectly matched with the ones of the MASIV and significant agreement is denoted with the experimental data \cite{cakir2022}. The comparisons of flow pressure evolution in the nozzle also yielded good agreement with the experimental results.
+
+`@Pearson:2017`
+
+# Research applications
+
+
 
 # Citations
 
