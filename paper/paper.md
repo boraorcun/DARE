@@ -69,8 +69,6 @@ The verification of the intake design and analysis module of the full propulsive
 
 The validation of the combustor and nozzle analysis module is conducted by comparing the predicted flow properties with the experimental and numerical data provided by Torrez \textit{et al.} \cite{torrez2011reduced}. Throughout the experiments conducted on a dual-mode ramjet combustor, the facility is operated in ramjet mode during which pressure measurements along the combustor and isolator sections are acquired. The corresponding experimental data is utilized for the validation studies of the MASIV code, developed for solving flow within ramjet and scramjet engines using various reduced-order approaches. Additionally, higher order numerical investigations are performed using the Ansys Fluent commercial code for comparison with the MASIV results. The results obtained with MASIV code, Fluent and the experimental campaigns are compared against the ones provided by the methodology of the present study under similar boundary and operating conditions. Although any fuel-air mixing model is not defined in the combustor module of the present work, the results of pressure drop, Mach number increase and temperature rise were perfectly matched with the ones of the MASIV and significant agreement is denoted with the experimental data \cite{cakir2022}. The comparisons of flow pressure evolution in the nozzle also yielded good agreement with the experimental results.
 
-`@Pearson:2017`
-
 # Research applications
 
 
