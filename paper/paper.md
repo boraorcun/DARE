@@ -31,16 +31,6 @@ bibliography: paper.bib
 
 # Summary
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
-
 The development of supersonic civil aviation with an emphasis on enhanced technical and environmental sustainability calls for a comprehensive approach to supersonic aircraft design and performance characterization. These designs must not only meet high-speed flight demands but also accommodate diverse external conditions throughout their missions, requiring optimization across multiple operating points for aerodynamic and propulsive systems \cite{kuchemann2012}. Thus, configuring, optimizing, and investigating a high-speed propulsion system is a pivotal step in realizing supersonic and hypersonic aircraft. In terms of a propulsion system architecture that can comply with the mission definitions of high-speed aircraft, ramjet engines offer significant advantages over rocket engines, as they do not require onboard oxidizer storage or rotating parts. Despite their simpler structure compared to turbo-based aero-engines, the internal flow dynamics of ramjets are complex and must be meticulously studied to ensure system stability and high performance \cite{murthy2001scramjet}. Accordingly, conceptual design methods using zero- and one-dimensional approaches are therefore necessary cost-effective alternatives to high-fidelity numerical simulations. They allow analysis of the design parameters and operational variables of each major component, as well as assessing propulsive performance metrics such as thrust, specific impulse, and fuel consumption.
 
 # Statement of need
