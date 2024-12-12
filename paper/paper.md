@@ -1,11 +1,13 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'DARE: A MATLAB code package for Design and Analysis of Ramjet/scramjet Engines'
 tags:
-  - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - Matlab
+  - Reduced order modeling
+  - High-speed propulsion
+  - Ramjet
+  - Scramjet
+  - Detailed chemistry 
+ 
 authors:
   - name: Adrian M. Price-Whelan
     orcid: 0000-0000-0000-0000
