@@ -9,20 +9,20 @@ tags:
   - Detailed chemistry 
  
 authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0000-0000-0000
+  - name: Bore O. Cakir
+    orcid: 0000-0002-3577-4730
     equal-contrib: true
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Author Without ORCID
+  - name: Ali Can Ispir
+    orcid: 0000-0002-2396-6647
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 2
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University, United States
+ - name: Department of Energy Sciences, Lund University, Sweden 
    index: 1
-   ror: 00hx57361
- - name: Institution Name, Country
+ - name: Department of Turbomachinery and Propulsion, von Karman Insitute for Fluid Dynamics, Belgium
    index: 2
- - name: Independent Researcher, Country
+ - name: Department of Mechanical Engineering, Eindhoven University of Technology, the Netherlands
    index: 3
 date: 13 August 2017
 bibliography: paper.bib
