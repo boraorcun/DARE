@@ -13,7 +13,7 @@ authors:
     orcid: 0000-0002-2396-6647
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
-    - name: Bore O. Cakir
+  - name: Bore O. Cakir
     orcid: 0000-0002-3577-4730
     equal-contrib: true
     affiliation: 2 # (Multiple affiliations must be quoted)
