@@ -45,6 +45,6 @@ These three studies focus on the design, analysis, and optimization of ramjet an
 
 # Acknowledgements
 
-This project has received funding from the European Union's Horizon 2020 research and innovation programme, MORE \& LESS (MDO and REgulations for Low-boom and Environmentally Sustainable Supersonic aviation) project under grant agreement No 101006856. 
+This project has received funding from the European Union's Horizon 2020 research and innovation programme, MORE \& LESS (MDO and REgulations for Low-boom and Environmentally Sustainable Supersonic aviation) and STRATOFLY projects under grant agreement numbers 101006856 and @@ respectively. 
 
 # References
