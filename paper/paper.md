@@ -12,18 +12,16 @@ authors:
   - name: Bore O. Cakir
     orcid: 0000-0002-3577-4730
     equal-contrib: true
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
+    affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Ali Can Ispir
     orcid: 0000-0002-2396-6647
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
-    affiliation: 3
+    affiliation: 2
 affiliations:
  - name: Department of Energy Sciences, Lund University, Sweden 
    index: 1
- - name: Department of Turbomachinery and Propulsion, von Karman Insitute for Fluid Dynamics, Belgium
-   index: 2
  - name: Department of Mechanical Engineering, Eindhoven University of Technology, the Netherlands
-   index: 3
+   index: 2
 date: 13 August 2017
 bibliography: paper.bib
 
