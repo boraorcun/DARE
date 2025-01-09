@@ -1,4 +1,4 @@
-# COBRAPRO: A MATLAB toolbox for Physics-based Battery Modeling and Co-simulation Parameter Optimization
+# DARE: A MATLAB Toolbox for Design and Analysis of Ramjet/scramjet Engines
 
 <a name="readme-top"></a>
 
@@ -9,11 +9,11 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]-->
 
-COBRAPRO (Co-simulation Battery Modeling for Accelerated Parameter Optimization) is a MATLAB software for physics-based modeling of lithium-ion batteries (LIB) with an embedded parameter identification routine. We aim to provide the battery modeling community with a versatile toolbox for calibrating battery models, a crucial process to achieve accurate simulation results for predicting real-world battery responses under various operating conditions.  
+DARE (Design and Analysis of Ramjet/scramjet Engines) is a MATLAB toolbox for design and analysis of ramjet/scramjet engines tool that combines the individual design and analysis approaches for high-speed propulsive path components to achieve a holistic low-fidelity design method for cost-efficient characterization of a high-speed propulsive design space. 
 
 ## Table of contents ##
 
-  * [What is COBRAPRO?](#toc1)
+  * [What is DARE?](#toc1)
   * [Why COBRAPRO?](#toc2)
   * [Accompanying papers](#toc9)
   * [System requirements](#toc3)
@@ -26,15 +26,13 @@ COBRAPRO (Co-simulation Battery Modeling for Accelerated Parameter Optimization)
   * [How to cite this code](#toc10)
   * [Contributors](#toc11)
 
-## What is COBRAPRO? <a name="toc1"></a> ##
+## What is DARE? <a name="toc1"></a> ##
 
-COBRAPRO implements the Dolye-Fuller-Newman (DFN) model, also known as the pseudo-two-dimensional (P2D) model, which is a high-fidelity LIB model considering the lithium-ion mass and charge conservation in the liquid electrolyte and solid electrodes, and Butler-Volmer kinetics. Parameter calibration, or identification, is a primary challenge in implementing the DFN model since the parameters such as geometric, transport, kinetic, concentration, and stoichiometric are often not known _a prioi_. 
+Ramjet/scramjet propulsive flow path is composed of an intake, an isolator, a combustor and a nozzle. DARE aims to provide a fully integrated flow path analysis, which includes three main modules. First module, covers the design and investigation process of the intake which is used to provide the necessary freestream flow modulation prior to the isolator through which a normal shock assumption is applied in case of ramjet configurations. The resultant flow properties are utilized for the combustion module to compute the flow evolution within the combustion chamber based on 1D steady inviscid flow equations coupled with detailed chemistry approach and JANAF tables using the SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers) code [@hindmarsh2005], developed by Lawrence Livermore National Laboratory. Finally, the third model is the nozzle design and analysis module, in which flow expansion through various expansion ratios and nozzle geometries are calculated using the 1D steady inviscid flow equations under cold flow conditions. Consequently, the parameters such as thrust, fuel consumption and specific impulse are calculated to quantify the engine performance for each design.
 
-In response to this challenge, COBRAPRO allows users to identify parameters of any battery cells based on their experimental current-voltage profiles. COBRAPRO solves an optimization problem that minimizes the error between the experimental and simulated voltage and state-of-charge curves to identify the parameters of interest. Although the software employs particle swarm optimization (PSO) by default, users have the flexibility modify the code to implement other MATLAB optimization algorithms such as `ga`, `fmincon`, `patternsearch`, and more. 
+## Why DARE? <a name="toc2"></a> ##
 
-## Why COBRAPRO? <a name="toc2"></a> ##
-
-Compared to existing open-source DFN packages like PyBaMM, LIONSIMBA, PETION, fastDFN, and MPET, only COBRAPRO and DEARLIBS include an integrated identification routine. COBRAPRO further distinguishes itself by enabling parameter identifiability analysis, allowing users to identify which parameters can be optimized based on the given data. Efficient computation is critical for parameter optimization, which requires numerous model simulations. COBRAPRO addresses this challenge with a fast solver and PSO parallel computing, offering model simulations up to three orders of magnitude faster than DEARLIBS and enhanced PSO performance through multicore processing.
+Since the 1960s, reduced-order models for high-speed propulsion systems, including ramjet and scramjet engines, have been developed and tested. Although there are numerous examples of various low-fidelity design and analysis studies aimed at accurately characterizing the performance specifications of ramjet engines, most of these tools focus on individual components of the propulsion system rather than a comprehensive methodology. Hence, there exists no prior attempt to couple the intake design approaches with a combustion analysis module with only a few studies considering the combined influence of flight conditions and design parameters throughout the entire propulsive flow path. Although understanding and analysis of the performance criteria for each component is essential on capturing the relevant physical phenomena that influence various aspect of design considerations for ramjet and scramjet engines, proper exploration of the design envelope is necesary for accurate description of mission definition and appriate optimization of design choices for high-speed aircraft design.
 
 ## Accompanying papers <a name="toc9"></a> ##
 For a comprehensive dive into the numerical methods, determination of consistent initial condition, and parameter optimization pipeline proposed in CORBAPRO, users are encouraged to check out our JES paper:
