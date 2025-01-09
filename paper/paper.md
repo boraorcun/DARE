@@ -1,5 +1,5 @@
 ---
-title: 'DARE: A MATLAB package for Design and Analysis of Ramjet/scramjet Engines'
+title: 'DARE: A MATLAB Toolbox for Design and Analysis of Ramjet/scramjet Engines'
 tags:
   - Matlab
   - Reduced order modeling
