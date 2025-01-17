@@ -39,7 +39,7 @@ Since the 1960s, reduced-order models for high-speed propulsion systems, includi
 The workflow of the holistic propulsive path design and analysis is provided in Fig. 5. The procedure starts with the selection of flight (Mach number, $M_{\infty}$, and altitude) and design conditions (intake exit Mach number, $M_{I,E}$, and $\beta$) based on the mission definition (Fig. 1, gray). Then, the intake design module utilizes the design parameters to determine the boundary conditions for the Busemann intakes. Once the intake exit Mach number is determined, a total pressure recovery factor ($\pi$) is selected to compute the flow properties upstream of the terminal conical shock wave. Afterwards, an upstream integration is performed solving the axisymmetric T-M equations to streamtrace a Busemann flow template. As the flow properties at the intake exit are determined based on the flight Mach number and the intake truncation angle, the upstream integration is terminated once the flow alignment at the intake exit meets the upstream boundary condition. Then the convergence of the intake design approach is checked against the intake inlet Mach number. If the converge criteria are not met, the design loop is iterated on by varying π to ensure the convergence tolerance of $|M_1^*-M_1|<10^\text{−4}$ is satisfied. If so, intake design module is terminated and flow properties alongside intake performance characteristics are extracted (Fig. 1, blue).
 
 <figure>
-  <img src="https://github.com/user-attachments/assets/8a6c66f9-3551-428a-a0e5-130249b8c8d6">
+  <img src="https://github.com/user-attachments/assets/8a6c66f9-3551-428a-a0e5-130249b8c8d6">\
   <figcaption>Fig 1. Workflow for reduced order design and analysis of RAM/SCRAMJET engines.</figcaption>
 </figure>
 
