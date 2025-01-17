@@ -16,7 +16,7 @@ DARE (Design and Analysis of Ramjet/scramjet Engines) is a MATLAB toolbox for de
   * [What is DARE?](#toc1)
   * [Why DARE?](#toc2)
   * [Accompanying papers](#toc9)
-  * [System requirements](#toc3)
+  * [Hollistic propulsive flow path analysis](#toc3)
   * [Installation](#toc4)
   * [Testing](#toc5)
   * [Examples](#toc6)
