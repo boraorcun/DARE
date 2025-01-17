@@ -52,7 +52,7 @@ In stage 3, a decision based on the engine mode (**RAM** or **SCRAM**) is made t
 
 For a comprehensive dive into the matemetical foundation of the propulsive cycle modelling, intake design approach, treatment of reactive flow solutions and extraction of propulsive performance parameters the users are encouraged to check out the following papers:
 
-[1] Cakir, B. O., & Ispir, A. C. (2025). Reduced order design space analysis and operational mapping for ramjet engines. Aerospace Science and Technology, 157, 109811. https: //doi.org/10.1016/j.ast.2024.109811
+[1] Cakir, B. O., & Ispir, A. C. (2025). Reduced order design space analysis and operational mapping for ramjet engines. Aerospace Science and Technology, 157, 109811. https://doi.org/10.1016/j.ast.2024.109811
 
 
 
