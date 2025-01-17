@@ -54,11 +54,15 @@ For a comprehensive dive into the matemetical foundation of the propulsive cycle
 
 [1] Cakir, B. O., & Ispir, A. C. (2025). Reduced order design space analysis and operational mapping for ramjet engines. Aerospace Science and Technology, 157, 109811. https://doi.org/10.1016/j.ast.2024.109811
 
+[2] Cakir, B. O., Ispir, A. C., Civerra, F., & Saracoglu, B. H. (2023). Reduced order design space analysis of for ramjet engines with data mining techniques. In AIAA SCITECH 2023 forum. https://doi.org/10.2514/6.2023-2017
 
+[3] Cakir, B. O., Ispir, A. C., & Saracoglu, B. H. (2022). Reduced order design and investi106 gation of intakes for high speed propulsion systems. Acta Astronautica, 199, 259–276. https://doi.org/https://doi.org/10.1016/j.actaastro.2022.07.037
 
-Our JOSS paper can also be viewed for additional information:
+[4] Cakir, B. O., Ispir, A. C., & Saracoglu, B. H. (2022). Reduced order design and investi106 gation of intakes for high speed propulsion systems. Acta Astronautica, 199, 259–276. https://doi.org/https://doi.org/10.1016/j.actaastro.2022.07.037
 
-[2] S. Ha and S. Onori, “COBRAPRO: A MATLAB toolbox for Physics-based Battery Modeling and Co-simulation Parameter Optimization,” Apr. 16, 2024, arXiv: arXiv:2404.10022. 
+[5] Ispir, A. C., Cakir, B. O., & Saracoglu, B. H. (2024). Design space investigations of scramjet engines using reduced-order modeling. Acta Astronautica, 217, 349–362. https://doi.org/https://doi.org/10.1016/j.actaastro.2024.01.036
+
+[6] Ispir, A., Cakir, B. & Saracoglu, B. (2022). Design space exploration for a scramjet engine by using data mining and low-fidelity design techniques. In HiSST: 2nd international conference on high-speed vehicle science & technology.
 
 ## Software dependencies <a name="toc3"></a> ##
 * MATLAB 2016a and later
