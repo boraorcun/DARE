@@ -14,7 +14,7 @@ DARE (Design and Analysis of Ramjet/scramjet Engines) is a MATLAB toolbox for de
 ## Table of contents ##
 
   * [What is DARE?](#toc1)
-  * [Why COBRAPRO?](#toc2)
+  * [Why DARE?](#toc2)
   * [Accompanying papers](#toc9)
   * [System requirements](#toc3)
   * [Installation](#toc4)
@@ -34,8 +34,17 @@ Ramjet/scramjet propulsive flow path is composed of an intake, an isolator, a co
 
 Since the 1960s, reduced-order models for high-speed propulsion systems, including ramjet and scramjet engines, have been developed and tested. Although there are numerous examples of various low-fidelity design and analysis studies aimed at accurately characterizing the performance specifications of ramjet engines, most of these tools focus on individual components of the propulsion system rather than a comprehensive methodology. Hence, there exists no prior attempt to couple the intake design approaches with a combustion analysis module with only a few studies considering the combined influence of flight conditions and design parameters throughout the entire propulsive flow path. Although understanding and analysis of the performance criteria for each component is essential on capturing the relevant physical phenomena that influence various aspect of design considerations for ramjet and scramjet engines, proper exploration of the design envelope is necesary for accurate description of mission definition and appriate optimization of design choices for high-speed aircraft design.
 
+## Hollistic propulsive flow path analysis <a name="toc3"></a> ##
+
+The workflow of the holistic propulsive path design and analysis is provided in Fig. 5. The procedure starts with the selection of flight (Mach number and altitude) and design conditions (intake exit Mach number and β) based on the mission definition (Fig. 1, gray). Then, the intake design module utilizes the design parameters to determine the boundary conditions for the Busemann intakes. Once the intake exit Mach number is determined, a total pressure recovery factor (π) is selected to compute the flow properties upstream of the terminal conical shock wave. Afterwards, an upstream integration is performed solving the axisymmetric T-M equations to streamtrace a Busemann flow template. As the flow properties at the intake exit are determined based on the flight Mach number and the intake truncation angle, the upstream integration is terminated once the flow alignment at the intake exit meets the upstream boundary condition. Then the convergence of the intake design approach is checked against the intake inlet Mach number. If the converge criteria are not met, the design loop is iterated on by varying π to ensure the convergence tolerance of < 10−4 is satisfied. If so, intake design module is terminated and flow properties alongside intake performance characteristics are extracted (Fig. 5, blue).
+
+In stage 3, flow exiting the intake enters the isolator. First, the isolator approximated by a normal shock decelerates the flow to subsonic conditions. Then, as the flow enters the combustor, an equivalence ratio is selected to initiate fuel injection and combustion. Within the combustor, reactive one-dimensional Navier-Stokes equations are solved to propagate the flow towards the exit of the combustor where the flow is required to reach sonic conditions. Thus, at the exit of the combustor a second convergence criteria regarding the setting of the fuel injection in terms of thermal choking exists. In case of premature occurrence of thermal choking, the flow decelerates to subsonic velocities before the nozzle throat which causes further deceleration as the area expansion ratio increases. A similar outcome is valid when the flow does not reach sonic conditions by the end of the combustor duct. Thus, a second iterative solution loop is constructed for the combustor module where the equivalence ratio (ER) is adjusted to ensure thermal choking by the end of the combustion chamber (Fig. 5, red). Once the convergence criteria are met for thermal choking, combustor performance characteristics are extracted and the flow is allowed to proceed into the nozzle for expansion and reacceleration. To begin with, a nozzle length and corresponding area ratio is prescribed. Then, the reactive conditions are frozen within the nozzle and the non-reactive set of ODE is solved until the predetermined nozzle length is completed. Final and third converge criteria is set at the end of the nozzle to check for perfect expansion to atmospheric conditions at given altitude. In case this condition is not met, the nozzle length and area ratio is varied in an iterative loop. Then, final propulsive performance data is extracted upon convergence of step Fig. 5 (green).
+
 ## Accompanying papers <a name="toc9"></a> ##
-For a comprehensive dive into the numerical methods, determination of consistent initial condition, and parameter optimization pipeline proposed in CORBAPRO, users are encouraged to check out our JES paper:
+
+For a comprehensive dive into the matemetical foundation of the propulsive cycle modelling, intake design approach, treatment of reactive flow solutions and extraction of propulsive performance parameters the users are encouraged to check out the following papers:
+
+
 
 [1] S. Ha and S. Onori, “COBRAPRO: An Open-Source Software for the Doyle-Fuller-Newman Model with Co-Simulation Parameter Optimization Framework,” J. Electrochem. Soc., vol. 171, no. 9, p. 090522, Sep. 2024, doi: 10.1149/1945-7111/ad7292.
 
