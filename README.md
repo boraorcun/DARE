@@ -179,32 +179,7 @@ Refer to our [API documentation](https://cobrapro.readthedocs.io/en/latest/index
 We welcome contributions from the community to improve COBRAPRO!
 * To report bugs, ask questions, and get help, please open a new issue through the Github issues page. Be as specific as possible (including screenshots, sample codes) for efficient communication. 
 * To make changes to the code or add new functions, 1) fork the repo and create your branch from main, 2) make your changes to the code, and 3) open a Pull request. Once approved, your contribution will be merged into the master branch.
-* For general discussions and project ideas, open a new Discussions through the Github issues page. You can also contact Sara Ha (<sungyeon.sara.ha@stanford.edu>).
-  
-## Known issues <a name="toc8"></a> ##
-1. To run COBRAPRO, only the SUNDIALS IDAS interface is required. In Installation step 4, if you install the KINSOL interface, you may run into the following issue:
-```
-Error using mex
-COBRAPRO/sundials-2.6.2/sundialsTB/kinsol/kim/src/kim.c:687:24: error: non-void function 'KIM_Stats' should return a value [-Wreturn-type]
-if (kimData == NULL) return;
-COBRAPRO/sundials-2.6.2/sundialsTB/kinsol/kim/src/kim.c:687:24: error: non-void function 'KIM_Free' should return a value [-Wreturn-type]
-return;
-2 errors generated.
-```
-To fix this issue, please go to `sundials-2.6.2/sundialsTB/kinsol/kim/src/kim.c` and modify line 687 to
-```
-if (kimData == NULL) return NULL;
-```
-and modify line 815 to
-```
-return NULL;
-```
-2. If you happen to run into the following error when installing/running COBRAPRO:
-```
-Error using mex
-'idm.mexmaca64' locked by mexLock API.
-``` 
-This seems to occur when MATLAB is trying to compile the mex files and mexLock is triggered. To resolve the issue, please restart MATLAB. 
+* For general discussions and project ideas, open a new Discussions through the Github issues page. You can also contact Ali Can Ispir (<a.c.ispir@tue.nl>) and Bora O. Cakir (<bora.cakir@vectoflow.de>).
 
 ## How to cite this code <a name="toc10"></a> ##
 If you use this code in your research, please cite our accompanying JES and JOSS papers:
