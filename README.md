@@ -191,11 +191,11 @@ We welcome contributions from the community to improve COBRAPRO!
 If you use this code in your research, please cite our accompanying journal articles [3], [5] and [6], and the JOSS paper:
 ```
 @article{cobrapro_joss_2024,
-   author = {Ha, Sara and Onori, Simona},
-   doi = {arXiv:2404.10022},
+   author = {Ispir, A. C. and Cakir, B. O.},
+   doi = {@@},
    journal = {Journal of Open Source Software},
-   year = {2024},
-   title = {{COBRAPRO: A MATLAB toolbox for Physics-based Battery Modeling and Co-simulation Parameter Optimization}},
+   year = {2025},
+   title = {{DARE: A MATLAB Toolbox for Design and Analysis of Ramjet/scramjet Engines}},
 }
 ```
 
