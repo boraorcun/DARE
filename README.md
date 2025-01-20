@@ -188,16 +188,7 @@ We welcome contributions from the community to improve COBRAPRO!
 * For general discussions and project ideas, open a new Discussions through the Github issues page. You can also contact Ali Can Ispir (<a.c.ispir@tue.nl>) and Bora O. Cakir (<bora.cakir@vectoflow.de>).
 
 ## How to cite this code <a name="toc10"></a> ##
-If you use this code in your research, please cite our accompanying JES and JOSS papers:
-```
-@article{cobrapro_jes_2024,
-   author = {Ha, Sara and Onori, Simona},
-   doi = {10.1149/1945-7111/ad7292},
-   journal = {Journal of The Electrochemical Society},
-   year = {2024},
-   title = {{COBRAPRO: An Open-Source Software for the Doyle-Fuller-Newman Model with Co-Simulation Parameter Optimization Framework}},
-} 
-```
+If you use this code in your research, please cite our accompanying journal articles [3], [5] and [6], and the JOSS paper:
 ```
 @article{cobrapro_joss_2024,
    author = {Ha, Sara and Onori, Simona},
