@@ -52,9 +52,9 @@ In stage 3, a decision based on the engine mode (**RAM** or **SCRAM**) is made t
 
 For a comprehensive dive into the matemetical foundation of the propulsive cycle modelling, intake design approach, treatment of reactive flow solutions and extraction of propulsive performance parameters the users are encouraged to check out the following papers:
 
-[1] Cakir, B., Ispir, A. & Saracoglu, B. (2022). Low fidelity design and analysis of propulsion systems for high-supersonic cruiser concepts. In HiSST: 2nd international conference on high-speed vehicle science & technology.
+[1] Cakir, B. O., Ispir, A. C. & Saracoglu, B. (2022). Low fidelity design and analysis of propulsion systems for high-supersonic cruiser concepts. In HiSST: 2nd international conference on high-speed vehicle science & technology.
 
-[2] Ispir, A., Cakir, B. & Saracoglu, B. (2022). Design space exploration for a scramjet engine by using data mining and low-fidelity design techniques. In HiSST: 2nd international conference on high-speed vehicle science & technology.
+[2] Ispir, A. C., Cakir, B. O. & Saracoglu, B. (2022). Design space exploration for a scramjet engine by using data mining and low-fidelity design techniques. In HiSST: 2nd international conference on high-speed vehicle science & technology.
 
 [3] Cakir, B. O., Ispir, A. C., & Saracoglu, B. H. (2022). Reduced order design and investigation of intakes for high speed propulsion systems. Acta Astronautica, 199, 259–276. https://doi.org/https://doi.org/10.1016/j.actaastro.2022.07.037
 
