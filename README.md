@@ -20,9 +20,7 @@ DARE (Design and Analysis of Ramjet/scramjet Engines) is a MATLAB toolbox for de
   * [Installation](#toc4)
   * [Testing](#toc5)
   * [Examples](#toc6)
-  * [API Documentation](#toc12)
   * [Contributing](#toc7)
-  * [Known issues](#toc8)
   * [How to cite this code](#toc10)
   * [Contributors](#toc11)
 
@@ -176,10 +174,6 @@ In the ```Examples``` folder, you will find example codes that will help you get
 * ```Examples/Parameter_Identifiability_Analysis```: examples showing how to perform LSA and correlation analysis to determine a subset of identifiable parameters for the given data
   * ```Examples/Parameter_Identifiability_Analysis/DFN_LSA_Corr_CC.m```: LSA and correlation analysis on CC profile
   * ```Examples/Parameter_Identifiability_Analysis/DFN_LSA_Corr_HPPC.m```: LSA and correlation analysis on HPPC profile
- 
-## Examples <a name="toc12"></a> ##
-
-Refer to our [API documentation](https://cobrapro.readthedocs.io/en/latest/index.html) page for a list of all the functions as scripts in CORBAPRO. 
 
 ## Contributing <a name="toc7"></a> ##
 We welcome contributions from the community to improve COBRAPRO!
