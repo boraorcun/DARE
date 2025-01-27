@@ -46,6 +46,6 @@ The third module addresses nozzle design and analysis, simulating flow expansion
  
 # Acknowledgements
 
-This project has received funding from the European Union's Horizon 2020 research and innovation programme, MORE \& LESS (MDO and REgulations for Low-boom and Environmentally Sustainable Supersonic aviation) and STRATOFLY projects under grant agreement numbers 101006856 and @@ respectively. 
+This project has received funding from the European Union's Horizon 2020 research and innovation programme, STRATOFLY (Stratospheric Flying Opportunities for High-Speed Propulsion Concepts) and MORE \& LESS (MDO and REgulations for Low-boom and Environmentally Sustainable Supersonic aviation) projects under grant agreement numbers 769246 and 101006856 respectively. 
 
 # References
