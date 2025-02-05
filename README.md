@@ -136,21 +136,6 @@ Type the name of your CasADi folder (case-sensitive):
 ```
 COBRAPRO installed successfully! To get started, try running scripts in the Examples folder.
 ```
-## Testing <a name="toc5"></a> ##
-
-Automated test codes are provided in `test` folder:
-- `test_1_casadiCheck.m` checks that CasADi is installed and working properly. Successful run will output to Command Window:
-```
-test_1 successful: CasADi is working properly!
-```
-- `test_2_comsolValidation.m` validates COBRAPRO against results generated from COMSOL Multiphysics[^2] as a benchmark. This ensures that COBRAPRO is installed properly and that the SUNDIALS IDA solver is working as expected. Successful validation will output to Command Window:
-```
-test_2 successful: COBRAPRO is working as expected! Results validated against COMSOL.
-```
-- `test_3_psoCheck.m` ensures that MATLAB's Global Optimization Toolbox and Parallel Computing Toolbox are installed, and makes sure that the PSO in parallel (required for parameter identification) is working correctly. Successful run will output to Command Window:
-```
-test_3 successful: PSO in parallel is working as expected!
-```
 
 ## Examples <a name="toc6"></a> ##
 In the ```Examples``` folder, you will find example codes that will help you get started.
