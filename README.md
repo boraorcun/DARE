@@ -70,12 +70,7 @@ For a comprehensive dive into the matemetical foundation of the propulsive cycle
 
 ## Software dependencies <a name="toc3"></a> ##
 * MATLAB 2016a and later
-* MATLAB Global Optimization Toolbox
-*	MATLAB Parallel Computing Toolbox
 *	SUNDIALS 2.6.2
-*	CasADi (MATLAB version)
-*	Xcode (for macOS users only)
-*	MinGW (for Window users only)
 
 Installation section below shows how to install the required software.
 
