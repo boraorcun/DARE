@@ -165,7 +165,7 @@ We welcome contributions from the community to improve COBRAPRO!
 If you use this code in your research, please cite our accompanying journal articles [3], [5] and [6], and the JOSS paper:
 ```
 @article{cobrapro_joss_2024,
-   author = {Ispir, A. C. and Cakir, B. O.},
+   author = {Cakir, B. O. and Ispir, A. C.},
    doi = {@@},
    journal = {Journal of Open Source Software},
    year = {2025},
