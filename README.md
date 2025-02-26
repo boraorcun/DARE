@@ -161,7 +161,7 @@ Enjoy!
 ```
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
-7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Friction coefficient of the engine duct wall (Cf), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment.
+7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Friction coefficient of the engine duct wall (Cf), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment. The Janaf Table must be also provided for calculating thermophysical properties of the species in the hydrogen-air reaction.
 
 ## Examples <a name="toc6"></a> ##
 In the ```Examples``` folder, you will find four examples of ramjet and scramjet engine designs to help you get started. Two of these examples demonstrate the design study of an engine having constant-area combustor with an 8m length and a 4m² inlet area and pre-defined diverged nozzle profile with a 10m² exit section, operating for ramjet and scramjet modes. The duct profile is shown below:
@@ -174,12 +174,18 @@ In the ```Examples``` folder, you will find four examples of ramjet and scramjet
 
 In other two examples, an engine having same combustor properties, but undefined nozzle profile were designed by user-defined nozzle expansion ratio and using perfect expansion.
 
-* ```Examples/Scramjet```: shows a design solution of a scramjet engine. In this example of the scramjet, the functions of the codes are given below:
-   * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
-
-
-
-
+* ```Examples/Scramjet/1/```: shows the design solution of a scramjet engine with pre-defined nozzle profile which is detailed above.
+* ```Examples/Scramjet/2/```: shows the design solution of a scramjet engine with expansion ratio at the nozzle with perfect expansion calculations.
+* ```Examples/Ramjet/1/```: shows the design solution of a ramjet engine with pre-defined nozzle profile which is detailed above.
+* ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine with expansion ratio at the nozzle with perfect expansion calculations.
+* In these examples of the scramjet and ramjet, the functions of the codes are given below:
+   * ```Examples/Codes/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
+   * ```Examples/Codes/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
+   * ```Examples/Codes/entropy_calculation_fun.m```: calculating entropy of each species.
+   * ```Examples/Codes/specific_heat_calculation_fun.m```: calculating specific heat of each species.
+   * ```Examples/Codes/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
+   * ```Examples/Codes/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
+  
 In the ```Examples``` folder, you will find example codes that will help you get started.
 * ```Examples/Cycling```: examples showing how to perform battery cycling simulations using experimentally identified parameters 
   * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
