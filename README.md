@@ -161,9 +161,25 @@ Enjoy!
 ```
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
-7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment.
+7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Friction coefficient of the engine duct wall (Cf), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment.
 
 ## Examples <a name="toc6"></a> ##
+In the ```Examples``` folder, you will find four examples of ramjet and scramjet engine designs to help you get started. Two of these examples demonstrate the design study of an engine having constant-area combustor with an 8m length and a 4m² inlet area and pre-defined diverged nozzle profile with a 10m² exit section, operating for ramjet and scramjet modes. The duct profile is shown below:
+
+<figure>
+  <img src="https://github.com/user-attachments/assets/8a6c66f9-3551-428a-a0e5-130249b8c8d6">
+ <br/>
+  <figcaption>Fig 2. Engine profile designed in the examples for operation in ramjet and scramjet modes.</figcaption>
+</figure>
+
+In other two examples, an engine having same combustor properties, but undefined nozzle profile were designed by user-defined nozzle expansion ratio and using perfect expansion.
+
+* ```Examples/Scramjet```: shows a design solution of a scramjet engine. In this example of the scramjet, the functions of the codes are given below:
+   * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
+
+
+
+
 In the ```Examples``` folder, you will find example codes that will help you get started.
 * ```Examples/Cycling```: examples showing how to perform battery cycling simulations using experimentally identified parameters 
   * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
