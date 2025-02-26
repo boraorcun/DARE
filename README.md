@@ -86,7 +86,13 @@ Installation section below shows how to install the required software.
 
 4. Run MATLAB and call `sundials-2.6.2\sundials-2.6.2\sundialsTB\install_STB.m` file. The installation of SUNDIALS will start.
 
-5. Respond to the prompts displayed in the Command Window in the following manner:
+5. Respond to the prompts displayed in the Command Window in the following manner: 
+
+```
+    MEX files will be compiled and built using the above options
+    Proceed? (y/n)
+```
+&rarr; Type `y` and hit enter
 
 ```
     Compile CVODES interface? (y/n) 
@@ -113,62 +119,9 @@ Installation section below shows how to install the required software.
 ```
 &rarr; Type the address of a folder that you want to install it into inside Matlab Toolbox, e.g., ~\Matlab\Toolbox\Sundials and hit enter
 
-6. Successful installation of SUNDIALS will output to the Command Window:
+Successful installation of SUNDIALS will output to the Command Window:
 ```
 Enjoy!
-```
-
-4. Download the latest version of [CasADi (MATLAB version)](https://web.casadi.org/get/) corresponding to your operating system. Unzip and move your CasADi folder inside the COBRAPRO folder. Your COBRAPRO folder should now contain the sundials-2.6.2 and CasADi folders.
-   - __IMPORTANT NOTE__: For Mac Apple Silicon users using the Apple Silicon version of MATLAB, note that you will need to download the Mac M1 version for [CasADi (MATLAB version)](https://web.casadi.org/get/). However, please download the "R2018b or later", _NOT_ the the "R2020b or later" for the Mac M1 version. We noticed that CasADi's "R2018b or later" of the Mac M1 version is not compatible with Apple Silicon version of MATLAB. This comment is valid as of CasADi v3.6.6.
-
-6. Before we can install SUNDIALS, the following software are required to compile the mex files that will interface with the SUNDIALS IDA solver:
-   - __Mac users__: Download [Xcode](https://developer.apple.com/xcode/) application (can be downloaded from Apple’s App Store). Once Xcode[^1] is installed, proceed to accept the license agreement. This can be done by opening the Xcode application, which will launch a license agreement window and click the “Agree” icon, or type
-     ```
-     sudo xcodebuild -license accept
-     ```
-     in Terminal. If the license is not accepted, MATLAB may give an error such as “Xcode is installed, but its license has not been accepted”.
-   - __Window users__: Download [MinGW](https://www.mathworks.com/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-fortran-compiler)
-     
-7. Now you are ready to run `install_COBRAPRO.m`, which is located in the main COBRAPRO folder. `install_COBRAPRO.m` will install SUNDIALS by calling the `sundials-2.6.2/sundialsTB/install_STB.m` file and automatically add the required folders to your MATLAB path. Run `install_COBRAPRO.m` and respond to the prompts displayed in the Command Window in the following manner:
-
-```
-MEX files will be compiled and built using the above options
-   Proceed? (y/n)
-```
-&rarr; Type `y` and hit enter
-
-```
-Compile CVODES interface? (y/n)
-```
-&rarr; Type `n` and hit enter
-```
-Compile IDAS  interface? (y/n)
-```
-&rarr; Type `y` and hit enter
-```
-Compile KINSOL  interface? (y/n)
-```
-&rarr; Type `n` and hit enter
-```
-MEX files were successfully created.
-    Install toolbox? (y/n) 
-```
-&rarr; Type `y` and hit enter
-```
-Specify the location where you wish to install the toolbox.
-The toolbox will be installed in a subdirectory "sundialsTB".
-Enter return to cancel the installation.
-Installation directory:
-```
-&rarr; Just hit enter
-```
-Type the name of your CasADi folder (case-sensitive):
-```
-&rarr; Type the name of the CasADi folder exactly as it appears and hit enter
-
-7. Successful installation will output to the Command Window:
-```
-COBRAPRO installed successfully! To get started, try running scripts in the Examples folder.
 ```
 
 ## Examples <a name="toc6"></a> ##
