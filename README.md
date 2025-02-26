@@ -84,6 +84,15 @@ Installation section below shows how to install the required software.
    
 3. Download [SUNDIALS 2.6.2](https://computing.llnl.gov/sites/default/files/inline-files/sundials-2.6.2.tar.gz) and unzip the folder. Relocate the sundials-2.6.2 folder inside the DARE folder.
 
+4. Run MATLAB and call `sundials-2.6.2\sundials-2.6.2\sundialsTB\install_STB.m` file. The installation of SUNDIALS will start.
+
+5. Respond to the prompts displayed in the Command Window in the following manner:
+
+```
+    Compile CVODES interface? (y/n) 
+```
+&rarr; Type `y` and hit enter
+
 4. Download the latest version of [CasADi (MATLAB version)](https://web.casadi.org/get/) corresponding to your operating system. Unzip and move your CasADi folder inside the COBRAPRO folder. Your COBRAPRO folder should now contain the sundials-2.6.2 and CasADi folders.
    - __IMPORTANT NOTE__: For Mac Apple Silicon users using the Apple Silicon version of MATLAB, note that you will need to download the Mac M1 version for [CasADi (MATLAB version)](https://web.casadi.org/get/). However, please download the "R2018b or later", _NOT_ the the "R2020b or later" for the Mac M1 version. We noticed that CasADi's "R2018b or later" of the Mac M1 version is not compatible with Apple Silicon version of MATLAB. This comment is valid as of CasADi v3.6.6.
 
