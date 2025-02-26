@@ -124,6 +124,25 @@ Successful installation of SUNDIALS will output to the Command Window:
 Enjoy!
 ```
 
+6. To set up the dependencies in your main DARE folder, go to your DARE folder, click on DARE.m file, and do necessary changes:
+
+```
+    pathCVODE = 
+```
+&rarr; Type the address where SUNDIALS was installed into e.g., ~\Matlab\Toolbox\Sundials.
+
+```
+    pathAtmos = 
+```
+&rarr; Type the address of where the codes used for calculating atmospheric standards are kept e.g., DARE\StandardAtm.
+
+```
+    pathFunc = 
+```
+&rarr; Type the address of where the codes used for calculating thermophysical properties calculations are kept e.g., DARE\Codes.
+
+7. 
+
 ## Examples <a name="toc6"></a> ##
 In the ```Examples``` folder, you will find example codes that will help you get started.
 * ```Examples/Cycling```: examples showing how to perform battery cycling simulations using experimentally identified parameters 
