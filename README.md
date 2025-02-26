@@ -141,7 +141,7 @@ Enjoy!
 ```
 &rarr; Type the address of where the codes used for calculating thermophysical properties calculations are kept e.g., DARE\Codes.
 
-7. 
+7. Simulation in DARE requires some flight and design conditions to be defined: Flight altitude (ALT), Flight Mach number (M_Inf), engine mode ('RAM' or 'SCRAM'), combustor length [m], combustor inlet area [m^2], equilivalence ratio, nozzle length [m], and nozzle pressure ratio.
 
 ## Examples <a name="toc6"></a> ##
 In the ```Examples``` folder, you will find example codes that will help you get started.
