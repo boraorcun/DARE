@@ -185,7 +185,9 @@ In other two examples, an engine having same combustor properties, but undefined
    * ```Examples/Codes/specific_heat_calculation_fun.m```: calculating specific heat of each species.
    * ```Examples/Codes/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
    * ```Examples/Codes/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
-  
+   * ```Examples/Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
+   * ```Examples/Dependencies/MW_H2_Air.mat```: molecular weight data of the species in the hydrogen-air combustion.
+ 
 In the ```Examples``` folder, you will find example codes that will help you get started.
 * ```Examples/Cycling```: examples showing how to perform battery cycling simulations using experimentally identified parameters 
   * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
