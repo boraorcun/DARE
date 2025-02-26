@@ -76,13 +76,13 @@ Installation section below shows how to install the required software.
 
 ## Installation <a name="toc4"></a> ##
 
-1. Download COBRAPRO by downloading the zip file or cloning this repository by typing in Terminal:
+1. Download DARE by downloading the zip file or cloning this repository by typing in Terminal:
    ```
-   git clone https://github.com/COBRAPROsimulator/COBRAPRO.git
+   git clone https://github.com/DARE/DARE.git
    ```
-2. Download [MATLAB](https://www.mathworks.com/downloads/) if not installed already. Make sure to select both the Global Optimization Toolbox and Parallel Computing Toolbox during the installation process.
+2. Download [MATLAB](https://www.mathworks.com/downloads/) if not installed already.
    
-3. Download [SUNDIALS 2.6.2](https://computing.llnl.gov/sites/default/files/inline-files/sundials-2.6.2.tar.gz) and unzip the folder. Relocate the sundials-2.6.2 folder inside the COBRAPRO folder.
+3. Download [SUNDIALS 2.6.2](https://computing.llnl.gov/sites/default/files/inline-files/sundials-2.6.2.tar.gz) and unzip the folder. Relocate the sundials-2.6.2 folder inside the DARE folder.
 
 4. Download the latest version of [CasADi (MATLAB version)](https://web.casadi.org/get/) corresponding to your operating system. Unzip and move your CasADi folder inside the COBRAPRO folder. Your COBRAPRO folder should now contain the sundials-2.6.2 and CasADi folders.
    - __IMPORTANT NOTE__: For Mac Apple Silicon users using the Apple Silicon version of MATLAB, note that you will need to download the Mac M1 version for [CasADi (MATLAB version)](https://web.casadi.org/get/). However, please download the "R2018b or later", _NOT_ the the "R2020b or later" for the Mac M1 version. We noticed that CasADi's "R2018b or later" of the Mac M1 version is not compatible with Apple Silicon version of MATLAB. This comment is valid as of CasADi v3.6.6.
