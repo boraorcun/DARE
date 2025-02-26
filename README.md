@@ -139,9 +139,29 @@ Enjoy!
 ```
     pathFunc = 
 ```
-&rarr; Type the address of where the codes used for calculating thermophysical properties calculations are kept e.g., DARE\Codes.
+&rarr; Type the address of where the codes used for calculating thermophysical properties and the combustor and nozzle duct geometric parameters are kept e.g., DARE\Codes.
 
-7. Simulation in DARE requires some flight and design conditions to be defined: Flight altitude (ALT), Flight Mach number (M_Inf), engine mode ('RAM' or 'SCRAM'), combustor length [m], combustor inlet area [m^2], equilivalence ratio, nozzle length [m], and nozzle pressure ratio.
+```
+    combCond{3} = 
+```
+&rarr; Type the combustor cross-sectional geometry e.g., "circular". The default type of the geometry in DARE code is "circular".
+
+```
+    combCond{4} = 
+```
+&rarr; Provide the input of the combustor duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
+
+```
+    combCond{6} = 
+```
+&rarr; Provide the input of the molecular weights data of the species in the Hydrogen-Air combustion e.g., '~\Dependencies\MW_H2_Air.mat'.
+
+```
+    nozzCond{4} = 
+```
+&rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
+
+7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment.
 
 ## Examples <a name="toc6"></a> ##
 In the ```Examples``` folder, you will find example codes that will help you get started.
