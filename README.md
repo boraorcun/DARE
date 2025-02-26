@@ -93,6 +93,31 @@ Installation section below shows how to install the required software.
 ```
 &rarr; Type `y` and hit enter
 
+```
+    Compile IDAS interface? (y/n) 
+```
+&rarr; Type `y` and hit enter
+
+```
+    Compile KINSOL interface? (y/n) 
+```
+&rarr; Type `y` and hit enter
+
+```
+    Install toolbox? (y/n)  
+```
+&rarr; Type `y` and hit enter
+
+```
+    Installation directory:
+```
+&rarr; Type the address of a folder that you want to install it into inside Matlab Toolbox, e.g., ~\Matlab\Toolbox\Sundials and hit enter
+
+6. Successful installation of SUNDIALS will output to the Command Window:
+```
+Enjoy!
+```
+
 4. Download the latest version of [CasADi (MATLAB version)](https://web.casadi.org/get/) corresponding to your operating system. Unzip and move your CasADi folder inside the COBRAPRO folder. Your COBRAPRO folder should now contain the sundials-2.6.2 and CasADi folders.
    - __IMPORTANT NOTE__: For Mac Apple Silicon users using the Apple Silicon version of MATLAB, note that you will need to download the Mac M1 version for [CasADi (MATLAB version)](https://web.casadi.org/get/). However, please download the "R2018b or later", _NOT_ the the "R2020b or later" for the Mac M1 version. We noticed that CasADi's "R2018b or later" of the Mac M1 version is not compatible with Apple Silicon version of MATLAB. This comment is valid as of CasADi v3.6.6.
 
