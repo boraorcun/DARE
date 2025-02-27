@@ -179,31 +179,20 @@ In other two examples, an engine having same combustor properties, but undefined
 * ```Examples/Ramjet/1/```: shows the design solution of a ramjet engine with pre-defined nozzle profile which is detailed above.
 * ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine with expansion ratio at the nozzle with perfect expansion calculations.
 * In these examples of the scramjet and ramjet, the functions of the codes are given below:
-   * ```Examples/Codes/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
-   * ```Examples/Codes/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
-   * ```Examples/Codes/entropy_calculation_fun.m```: calculating entropy of each species.
-   * ```Examples/Codes/specific_heat_calculation_fun.m```: calculating specific heat of each species.
-   * ```Examples/Codes/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
-   * ```Examples/Codes/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
+   * ```Examples/Functions/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
+   * ```Examples/Functions/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
+   * ```Examples/Functions/entropy_calculation_fun.m```: calculating entropy of each species.
+   * ```Examples/Functions/specific_heat_calculation_fun.m```: calculating specific heat of each species.
+   * ```Examples/Functions/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
+   * ```Examples/Functions/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
+   * ```Examples/Functions/BusemannIntake.m```: calculating intake parameters based on Busemann intake design approach.
+   * ```Examples/Functions/oblique_angle_calc.m```: BORA!!!
+   * ```Examples/Functions/ramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in ramjet operational mode.
+   * ```Examples/Functions/scramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in scramjet operational mode.
    * ```Examples/Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
    * ```Examples/Dependencies/MW_H2_Air.mat```: molecular weight data of the species in the hydrogen-air combustion.
- 
-In the ```Examples``` folder, you will find example codes that will help you get started.
-* ```Examples/Cycling```: examples showing how to perform battery cycling simulations using experimentally identified parameters 
-  * ```Examples/Cycling/cycle_CC.m```: simulating constant current (CC) cycling experiments and result visualization (voltage, state-of-charge, internal variable curves)
-  * ```Examples/Cycling/cycle_HPPC.m```: simulating hybrid pulse power characterization (HPPC) profile and result visualization (voltage, state-of-charge, internal variable curves)
-  * ```Examples/Cycling/cycle_UDDS.m```: simulating driving cycle profile and result visualization (voltage, state-of-charge, internal variable curves)
-* ```Examples/Parameter_Identification_Routines```: examples showing how to perform parameter identification using PSO
-&rarr; NOTE: In general, these scripts take a while to run. Using a processor with multiple cores, e.g., 12 or 24 cores, will significantly speed up the PSO. Also, PSO particle size and PSO exit conditions affect the PSO convergence accuracy and time.)
-  * ```Examples/Parameter_Identification_Routines/DFN_pso_0_05C.m```: parameter identification using C/20 discharge data
-  * ```Examples/Parameter_Identification_Routines/DFN_pso_HPPC.m```: parameter identification using HPPC data (given same number of PSO particles and PSO exit conditions, takes longer to run than ```DFN_pso_0_05C.m``` since HPPC takes much longer to run than C/20 discharge)
-* ```Examples/Parameter_Identification_Results```: examples showing parameter identification results
-  * ```Examples/Parameter_Identification_Results/DFN_pso_0_05C_identification.m```: parameter identification results using C/20 discharge data 
-  * ```Examples/Parameter_Identification_Results/DFN_pso_HPPC_identification.m```: parameter identification results using HPPC data
-  * ```Examples/Parameter_Identification_Results/DFN_pso_UDDS_validation.m```: parameter identification validation using UDDS data
-* ```Examples/Parameter_Identifiability_Analysis```: examples showing how to perform LSA and correlation analysis to determine a subset of identifiable parameters for the given data
-  * ```Examples/Parameter_Identifiability_Analysis/DFN_LSA_Corr_CC.m```: LSA and correlation analysis on CC profile
-  * ```Examples/Parameter_Identifiability_Analysis/DFN_LSA_Corr_HPPC.m```: LSA and correlation analysis on HPPC profile
+
+For these examples, flight conditions for scramjet engine operation were assumed as 6 of the flight Mach number and 30km of the flight altitude, while 4 of the flight Mach and 20km altitude were selected for the ramjet engine operation. For the scramjet engine design examples, intake exit Mach number and truncation angle were chosen as .. and .. while these values were ... and ... for the ramjet examples. Equilivalence ratio was chosen as 0.2 for the scramjet operation while it was optimized as 0.1356 that yields the thermal choking at the throat of the ramjet combustors. 
 
 ## Contributing <a name="toc7"></a> ##
 We welcome contributions from the community to improve COBRAPRO!
