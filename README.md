@@ -175,9 +175,9 @@ In the ```Examples``` folder, you will find four examples of ramjet and scramjet
 In other two examples, an engine having same combustor properties, but undefined nozzle profile were designed by user-defined nozzle expansion ratio and using perfect expansion.
 
 * ```Examples/Scramjet/1/```: shows the design solution of a scramjet engine with pre-defined nozzle profile which is detailed above.
-* ```Examples/Scramjet/2/```: shows the design solution of a scramjet engine with expansion ratio at the nozzle with perfect expansion calculations.
+* ```Examples/Scramjet/2/```: shows the design solution of a scramjet engine, assuming perfect expansion at the nozzle, with the flow exiting at a pressure 10% higher than the ambient atmospheric pressure. Nozzle divergence angle is defined as 15°.
 * ```Examples/Ramjet/1/```: shows the design solution of a ramjet engine with pre-defined nozzle profile which is detailed above.
-* ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine with expansion ratio at the nozzle with perfect expansion calculations.
+* ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine, assuming perfect expansion at the nozzle, with the flow exiting at a pressure 10% higher than the ambient atmospheric pressure. Nozzle divergence angle is defined as 15°.
 * In these examples of the scramjet and ramjet, the functions of the codes are given below:
    * ```Examples/Functions/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
    * ```Examples/Functions/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
@@ -193,30 +193,27 @@ In other two examples, an engine having same combustor properties, but undefined
    * ```Examples/StandardAtm```: containing functions that calculate air properties.
    * 
 
-For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 30 km, while a Mach number of 4 and an altitude of 20 km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as [...] and [...], respectively, whereas for the ramjet examples, these values were [...] and [...]. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.1356 to induce thermal choking at the throat of the combustor.
-
-For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined expansion ratio, the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
-| Calculated Parameters | Ramjet | Scramjet |
-| ------------- | ------------- | ------------- |
-| Intake length [m] | Content Cell | Content Cell |
-| Nozzle length [m] | Content Cell | Content Cell |
-| Uninstalled thrust [kN] | Content Cell | Content Cell |
-| Specific impulse [s] | Content Cell | Content Cell |
-| Fuel consumption [kg/s] | Content Cell | Content Cell |
-| Total pressure recovery | Content Cell | Content Cell |
-| Compression ratio | Content Cell | Content Cell |
-| Mass flow rate of air [kg/s] | Content Cell | Content Cell |
+For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as [...] and [...], respectively, whereas for the ramjet examples, these values were [...] and [...]. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.1356 to induce thermal choking at the throat of the combustor.
 
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
-| Intake length [m] | Content Cell | Content Cell |
-| Uninstalled thrust [kN] | Content Cell | Content Cell |
-| Specific impulse [s] | Content Cell | Content Cell |
-| Fuel consumption [kg/s] | Content Cell | Content Cell |
-| Total pressure recovery | Content Cell | Content Cell |
-| Compression ratio | Content Cell | Content Cell |
-| Mass flow rate of air [kg/s] | Content Cell | Content Cell |
+| Intake length [m] | Content Cell | Content Cell | BORA!!!
+| Uninstalled thrust [kN] | Content Cell | 1411 |
+| Specific impulse [ks] | Content Cell | 29 |
+| Fuel consumption [kg/s] | Content Cell | 5 |
+| Mass flow rate of air [kg/s] | Content Cell | 872.4 |
+
+For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined expansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
+| Calculated Parameters | Ramjet | Scramjet |
+| ------------- | ------------- | ------------- |
+| Intake length [m] | Content Cell | Content Cell | BORA!!!
+| Nozzle length [m] | Content Cell | 20.4 |
+| Nozzle exit area [m²] | Content Cell | 136 |
+| Uninstalled thrust [kN] | Content Cell | 917 |
+| Specific impulse [ks] | Content Cell | 18.82 |
+| Fuel consumption [kg/s] | Content Cell | 5 |
+| Mass flow rate of air [kg/s] | Content Cell | 872.4 |
 
 ## Contributing <a name="toc7"></a> ##
 We welcome contributions from the community to improve COBRAPRO!
