@@ -193,7 +193,7 @@ In other two examples, an engine having same combustor properties, but undefined
    * ```Examples/StandardAtm```: containing functions that calculate air properties.
    * 
 
-For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as [...] and [...], respectively, whereas for the ramjet examples, these values were [...] and [...]. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.1356 to induce thermal choking at the throat of the combustor.
+For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.5175 to induce thermal choking at the throat of the combustor.
 
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
@@ -204,7 +204,7 @@ For the ramjet and scramjet engine examples with a predefined nozzle profile, th
 | Fuel consumption [kg/s] | Content Cell | 5 |
 | Mass flow rate of air [kg/s] | Content Cell | 872.4 |
 
-For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined expansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
+For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined underexpansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
 | Intake length [m] | Content Cell | Content Cell | BORA!!!
