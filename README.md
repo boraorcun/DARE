@@ -193,30 +193,34 @@ In other two examples, an engine having same combustor properties, but undefined
    * ```Examples/StandardAtm```: containing functions that calculate air properties.
    * 
 
-For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.5175 to induce thermal choking at the throat of the combustor.
+For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.50 to induce thermal choking at the throat of the combustor.
 
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
 | Intake length [m] | Content Cell | Content Cell | BORA!!!
-| Uninstalled thrust [kN] | Content Cell | 1411 |
-| Specific impulse [ks] | Content Cell | 29 |
-| Fuel consumption [kg/s] | Content Cell | 5 |
-| Mass flow rate of air [kg/s] | Content Cell | 872.4 |
+| Uninstalled thrust [kN] | 1503.4 | 1411 |
+| Specific impulse [ks] | 12.64 | 29 |
+| Fuel consumption [kg/s] | 12.1 | 5 |
+| Mass flow rate of air [kg/s] | 844.2 | 872.4 |
 
 For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined underexpansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
 | Intake length [m] | Content Cell | Content Cell | BORA!!!
-| Nozzle length [m] | Content Cell | 20.4 |
-| Nozzle exit area [m²] | Content Cell | 136 |
-| Uninstalled thrust [kN] | Content Cell | 917 |
-| Specific impulse [ks] | Content Cell | 18.82 |
-| Fuel consumption [kg/s] | Content Cell | 5 |
-| Mass flow rate of air [kg/s] | Content Cell | 872.4 |
+| Nozzle length [m] | 26.2 | 20.4 |
+| Nozzle exit area [m²] | 20.8 | 136 |
+| Uninstalled thrust [kN] | 736 | 917 |
+| Specific impulse [ks] | 6.2 | 18.82 |
+| Fuel consumption [kg/s] | 12.1 | 5 |
+| Mass flow rate of air [kg/s] | 844.2 | 872.4 |
+
+In both engine and nozzle design types, the code generates two result files: one that details the numerical process of how the flow variables change (either "Ramjet_Combustor_Nozzle_Modules_Solution.txt" or "Scramjet_Combustor_Nozzle_Modules_Solution.txt", depending on the engine type being solved), and another that contains the performance results ("Performance_Results_for_Ramjet_Engine.txt" or "Performance_Results_for_Scramjet_Engine.txt").
+
+For solutions with a predefined nozzle area profile, the computed nozzle domain results are appended to the combustor flow domain results, but the iteration count resets. In contrast, for solutions with a perfectly expanded nozzle, the recorded flow variable changes in the combustor do not inherently include any solution for the nozzle.
 
 ## Contributing <a name="toc7"></a> ##
-We welcome contributions from the community to improve COBRAPRO!
+We welcome contributions from the community to improve DARE!
 * To report bugs, ask questions, and get help, please open a new issue through the Github issues page. Be as specific as possible (including screenshots, sample codes) for efficient communication. 
 * To make changes to the code or add new functions, 1) fork the repo and create your branch from main, 2) make your changes to the code, and 3) open a Pull request. Once approved, your contribution will be merged into the master branch.
 * For general discussions and project ideas, open a new Discussions through the Github issues page. You can also contact Ali Can Ispir (<a.c.ispir@tue.nl>) and Bora O. Cakir (<bora.cakir@vectoflow.de>).
