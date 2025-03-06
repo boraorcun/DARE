@@ -18,11 +18,10 @@ DARE (Design and Analysis of Ramjet/scramjet Engines) is a MATLAB toolbox for de
   * [Hollistic propulsive flow path analysis](#toc3)
   * [Accompanying papers](#toc9)
   * [Installation](#toc4)
-  * [Testing](#toc5)
-  * [Examples](#toc6)
-  * [Contributing](#toc7)
-  * [How to cite this code](#toc10)
-  * [Contributors](#toc11)
+  * [Examples](#toc5)
+  * [Contributing](#toc6)
+  * [How to cite this code](#toc7)
+  * [Contributors](#toc8)
 
 ## What is DARE? <a name="toc1"></a> ##
 
@@ -163,7 +162,7 @@ Enjoy!
 
 7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Friction coefficient of the engine duct wall (Cf), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment. The Janaf Table must be also provided for calculating thermophysical properties of the species in the hydrogen-air reaction.
 
-## Examples <a name="toc6"></a> ##
+## Examples <a name="toc5"></a> ##
 In the ```Examples``` folder, you will find four examples of ramjet and scramjet engine designs to help you get started. Two of these examples demonstrate the design study of an engine having constant-area combustor with an 8m length and a 4m² inlet area and pre-defined diverged nozzle profile with a 10m² exit section, operating for ramjet and scramjet modes. The duct profile is shown below:
 
 <figure>
@@ -219,13 +218,13 @@ In both engine and nozzle design types, the code generates two result files: one
 
 For solutions with a predefined nozzle area profile, the computed nozzle domain results are appended to the combustor flow domain results, but the iteration count resets. In contrast, for solutions with a perfectly expanded nozzle, the recorded flow variable changes in the combustor do not inherently include any solution for the nozzle.
 
-## Contributing <a name="toc7"></a> ##
+## Contributing <a name="toc6"></a> ##
 We welcome contributions from the community to improve DARE!
 * To report bugs, ask questions, and get help, please open a new issue through the Github issues page. Be as specific as possible (including screenshots, sample codes) for efficient communication. 
 * To make changes to the code or add new functions, 1) fork the repo and create your branch from main, 2) make your changes to the code, and 3) open a Pull request. Once approved, your contribution will be merged into the master branch.
 * For general discussions and project ideas, open a new Discussions through the Github issues page. You can also contact Ali Can Ispir (<a.c.ispir@tue.nl>) and Bora O. Cakir (<bora.cakir@vectoflow.de>).
 
-## How to cite this code <a name="toc10"></a> ##
+## How to cite this code <a name="toc7"></a> ##
 If you use this code in your research, please cite our accompanying journal articles [3], [5] and [6], and the JOSS paper:
 ```
 @article{cobrapro_joss_2024,
@@ -237,7 +236,7 @@ If you use this code in your research, please cite our accompanying journal arti
 }
 ```
 
-## Contributors <a name="toc11"></a> ##
+## Contributors <a name="toc8"></a> ##
 
 [![All Contributors](https://img.shields.io/github/all-contributors/COBRAPROsimulator/COBRAPRO?color=ee8449&style=flat-square)](#contributors)
 
