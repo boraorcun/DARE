@@ -166,7 +166,7 @@ Enjoy!
 In the ```Examples``` folder, you will find four examples of ramjet and scramjet engine designs to help you get started. Two of these examples demonstrate the design study of an engine having constant-area combustor with an 8m length and a 4m² inlet area and pre-defined diverged nozzle profile with a 10m² exit section, operating for ramjet and scramjet modes. The duct profile is shown below:
 
 <figure>
-  <img src="https://github.com/user-attachments/assets/8a6c66f9-3551-428a-a0e5-130249b8c8d6">
+  <img src="https://github.com/boraorcun/DARE/issues/1#issue-2900107751">
  <br/>
   <figcaption>Fig 2. Engine profile designed in the examples for operation in ramjet and scramjet modes.</figcaption>
 </figure>
