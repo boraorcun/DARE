@@ -190,7 +190,6 @@ In other two examples, an engine having same combustor properties, but undefined
    * ```Examples/Functions/scramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in scramjet operational mode.
    * ```Examples/Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
    * ```Examples/StandardAtm```: containing functions that calculate air properties.
-   * 
 
 For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.50 to induce thermal choking at the throat of the combustor.
 
