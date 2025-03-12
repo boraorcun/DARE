@@ -161,6 +161,7 @@ Enjoy!
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
 7. To run a simulation in DARE, the following flight and design conditions must also be specified:
+
    * Flight Altitude [m] ('flightComb(1)')
    * Flight Mach number ('flightComb(2)')
    * Intake exit Mach Number ('inCond{1}')
