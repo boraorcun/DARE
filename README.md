@@ -160,7 +160,22 @@ Enjoy!
 ```
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
-7. To run a simulation in DARE, the following flight and design conditions must also be specified:
+7. The functions utilized within the DARE software package and their purpose are provided below.
+
+   * ```Functions/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
+   * ```Functions/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
+   * ```Functions/entropy_calculation_fun.m```: calculating entropy of each species.
+   * ```Functions/specific_heat_calculation_fun.m```: calculating specific heat of each species.
+   * ```Functions/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
+   * ```Functions/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
+   * ```Functions/BusemannIntake.m```: calculating intake parameters based on Busemann intake design approach.
+   * ```Functions/oblique_angle_calc.m```: BORA!!!
+   * ```Functions/ramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in ramjet operational mode.
+   * ```Functions/scramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in scramjet operational mode.
+   * ```Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
+   * ```StandardAtm```: containing functions that calculate air properties.
+
+8. To run a simulation in DARE, the following flight and design conditions must also be specified:
 
    * Flight Altitude [m] ('flightComb(1)')
    * Flight Mach number ('flightComb(2)')
@@ -192,19 +207,6 @@ In other two examples, an engine having same combustor properties, but undefined
 * ```Examples/Scramjet/2/```: shows the design solution of a scramjet engine, assuming perfect expansion at the nozzle, with the flow exiting at a pressure 10% higher than the ambient atmospheric pressure. Nozzle divergence angle is defined as 15°.
 * ```Examples/Ramjet/1/```: shows the design solution of a ramjet engine with pre-defined nozzle profile which is detailed above.
 * ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine, assuming perfect expansion at the nozzle, with the flow exiting at a pressure 10% higher than the ambient atmospheric pressure. Nozzle divergence angle is defined as 15°.
-* In these examples of the scramjet and ramjet, the functions of the codes are given below:
-   * ```Examples/Functions/thermophysical_properties_calculation_fun.m```: calculating thermophysical properties of the species, including enthalpy [kJ/kg], entropy [kJ/kg/K], specific heat [kJ/kg].
-   * ```Examples/Functions/enthalpy_calculation_fun.m```: calculating enthalpy of each species.
-   * ```Examples/Functions/entropy_calculation_fun.m```: calculating entropy of each species.
-   * ```Examples/Functions/specific_heat_calculation_fun.m```: calculating specific heat of each species.
-   * ```Examples/Functions/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
-   * ```Examples/Functions/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [@jachimowski1984chemical].
-   * ```Examples/Functions/BusemannIntake.m```: calculating intake parameters based on Busemann intake design approach.
-   * ```Examples/Functions/oblique_angle_calc.m```: BORA!!!
-   * ```Examples/Functions/ramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in ramjet operational mode.
-   * ```Examples/Functions/scramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in scramjet operational mode.
-   * ```Examples/Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
-   * ```Examples/StandardAtm```: containing functions that calculate air properties.
 
 For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.50 to induce thermal choking at the throat of the combustor.
 
