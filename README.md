@@ -214,7 +214,7 @@ For the ramjet and scramjet engine examples with a predefined nozzle profile, th
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
 | Intake length [m] | 26.32 | 19.96 | 
-| Intake TPR [%] | 86.67 | Content Cell | 
+| Intake TPR [%] | 96.54 | 86.67 | 
 | Uninstalled thrust [kN] | 1503.4 | 1411 |
 | Specific impulse [ks] | 12.64 | 29 |
 | Fuel consumption [kg/s] | 12.1 | 5 |
@@ -224,7 +224,7 @@ For the ramjet and scramjet engine examples with a perfectly expanded nozzle and
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
 | Intake length [m] | 26.32 | 19.96 | 
-| Intake TPR [%] | 86.67 | Content Cell | 
+| Intake TPR [%] | 96.54 | 86.67 | 
 | Nozzle length [m] | 26.2 | 20.4 |
 | Nozzle exit area [m²] | 20.8 | 136 |
 | Uninstalled thrust [kN] | 736 | 917 |
