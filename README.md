@@ -215,10 +215,10 @@ For the ramjet and scramjet engine examples with a predefined nozzle profile, th
 | ------------- | ------------- | ------------- |
 | Intake length [m] | 26.32 | 19.96 | 
 | Intake TPR [%] | 96.54 | 86.67 | 
-| Uninstalled thrust [kN] | 1503.4 | 1411 |
-| Specific impulse [ks] | 12.64 | 29 |
-| Fuel consumption [kg/s] | 12.1 | 5 |
-| Mass flow rate of air [kg/s] | 844.2 | 872.4 |
+| Uninstalled thrust [kN] | 1503.4 | 1408.78 |
+| Specific impulse [ks] | 12.64 | 28.92 |
+| Fuel consumption [kg/s] | 12.1 | 4.96 |
+| Mass flow rate of air [kg/s] | 844.2 | 872.39 |
 
 For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined underexpansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
@@ -226,11 +226,11 @@ For the ramjet and scramjet engine examples with a perfectly expanded nozzle and
 | Intake length [m] | 26.32 | 19.96 | 
 | Intake TPR [%] | 96.54 | 86.67 | 
 | Nozzle length [m] | 26.2 | 20.4 |
-| Nozzle exit area [m²] | 20.8 | 136 |
-| Uninstalled thrust [kN] | 736 | 917 |
-| Specific impulse [ks] | 6.2 | 18.82 |
-| Fuel consumption [kg/s] | 12.1 | 5 |
-| Mass flow rate of air [kg/s] | 844.2 | 872.4 |
+| Nozzle exit area [m²] | 20.8 | 137.49 |
+| Uninstalled thrust [kN] | 736 | 912.15 |
+| Specific impulse [ks] | 6.2 | 18.72 |
+| Fuel consumption [kg/s] | 12.1 | 4.97 |
+| Mass flow rate of air [kg/s] | 844.2 | 872.39 |
 
 In both engine and nozzle design types, the code generates two result files: one that details the numerical process of how the flow variables change (either "Ramjet_Combustor_Nozzle_Modules_Solution.txt" or "Scramjet_Combustor_Nozzle_Modules_Solution.txt", depending on the engine type being solved), and another that contains the performance results ("Performance_Results_for_Ramjet_Engine.txt" or "Performance_Results_for_Scramjet_Engine.txt").
 
