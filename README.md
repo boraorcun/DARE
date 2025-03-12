@@ -160,7 +160,21 @@ Enjoy!
 ```
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
-7. To run a simulation in DARE, the following flight and design conditions must also be specified: Flight Altitude [m] ('flightComb(1)'), Flight Mach number ('flightComb(2)'), Intake exit Mach Number ('inCond{1}'), Intake truncation angle ('inCond{2}'), Intake exit area ('inCond{3}') [m²], Engine Mode: 'RAM' or 'SCRAM' ('engineMode'), Friction coefficient of the engine duct wall (Cf), Combustor Length [m] ('combCond{1}'), Combustor Inlet Area [m²] ('combCond{2}'), Equivalence Ratio ('combCond{5}'), Nozzle Length [m] ('nozzCond{1}'), and Nozzle Pressure Ratio ('nozzCond{2}'). These parameters define the operating conditions and geometry of the propulsion system within the simulation environment. The Janaf Table must be also provided for calculating thermophysical properties of the species in the hydrogen-air reaction.
+7. To run a simulation in DARE, the following flight and design conditions must also be specified:
+   * Flight Altitude [m] ('flightComb(1)')
+   * Flight Mach number ('flightComb(2)')
+   * Intake exit Mach Number ('inCond{1}')
+   * Intake truncation angle ('inCond{2}')
+   * Intake exit area ('inCond{3}') [m²]
+   * Engine Mode: 'RAM' or 'SCRAM' ('engineMode')
+   * Friction coefficient of the engine duct wall (Cf)
+   * Combustor Length [m] ('combCond{1}')
+   * Combustor Inlet Area [m²] ('combCond{2}')
+   * Equivalence Ratio ('combCond{5}')
+   * Nozzle Length [m] ('nozzCond{1}')
+   * Nozzle Pressure Ratio ('nozzCond{2}')
+  
+These parameters define the operating conditions and geometry of the propulsion system within the simulation environment. The Janaf Table must be also provided for calculating thermophysical properties of the species in the hydrogen-air reaction.
 
 ## Examples <a name="toc5"></a> ##
 In the ```Examples``` folder, you will find four examples of ramjet and scramjet engine designs to help you get started. Two of these examples demonstrate the design study of an engine having constant-area combustor with an 8m length and a 4m² inlet area and pre-defined diverged nozzle profile with a 10m² exit section, operating for ramjet and scramjet modes. The duct profile is shown below:
