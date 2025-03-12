@@ -172,7 +172,7 @@ Enjoy!
    * ```Functions/oblique_angle_calc.m```: calculating leading edge truncation parameters of Busemann intake design approach.
    * ```Functions/ramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in ramjet operational mode.
    * ```Functions/scramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in scramjet operational mode.
-   * ```Dependencies/area_duct_profile.mat```: combustor + nozzle duct profile along with duct axis.
+   * ```Dependencies/area_duct_profile.mat```: combustor and nozzle duct profiles along with duct axis.
    * ```StandardAtm```: containing functions that calculate air properties.
 
 8. To run a simulation in DARE, the following flight and design conditions must also be specified:
