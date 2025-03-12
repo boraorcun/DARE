@@ -213,7 +213,8 @@ For these examples, the flight conditions for scramjet engine operation were ass
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
-| Intake length [m] | Content Cell | Content Cell | BORA!!!
+| Intake length [m] | 26.32 | 19.96 | 
+| Intake TPR [%] | 86.67 | Content Cell | 
 | Uninstalled thrust [kN] | 1503.4 | 1411 |
 | Specific impulse [ks] | 12.64 | 29 |
 | Fuel consumption [kg/s] | 12.1 | 5 |
@@ -222,7 +223,8 @@ For the ramjet and scramjet engine examples with a predefined nozzle profile, th
 For the ramjet and scramjet engine examples with a perfectly expanded nozzle and a predefined underexpansion ratio (exit pressure will be 10% higher than atmospheric pressure), the calculated performance values and design parameters, such as intake and nozzle lengths, are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
-| Intake length [m] | Content Cell | Content Cell | BORA!!!
+| Intake length [m] | 26.32 | 19.96 | 
+| Intake TPR [%] | 86.67 | Content Cell | 
 | Nozzle length [m] | 26.2 | 20.4 |
 | Nozzle exit area [m²] | 20.8 | 136 |
 | Uninstalled thrust [kN] | 736 | 917 |
