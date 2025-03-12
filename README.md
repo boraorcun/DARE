@@ -126,37 +126,37 @@ Enjoy!
 6. To set up the dependencies in your main DARE folder, go to your DARE folder, click on DARE.m file, and do necessary changes:
 
 ```
-    pathCVODE = 
+    pathCVODE = '...Provide directory for CVODE...';
 ```
 &rarr; Type the address where SUNDIALS was installed into e.g., ~\Matlab\Toolbox\Sundials.
 
 ```
-    pathAtmos = 
+    pathAtmos = '...Provide directory for atmosphere model...';
 ```
 &rarr; Type the address of where the codes used for calculating atmospheric standards are kept e.g., DARE\StandardAtm.
 
 ```
-    pathFunc = 
+    pathFunc = "...Provide directory for functions..."
 ```
 &rarr; Type the address of where the codes used for calculating thermophysical properties and the combustor and nozzle duct geometric parameters are kept e.g., DARE\Codes.
 
 ```
-    combCond{3} = 
+    combCond{3} = "...Provide combustor shape..."
 ```
 &rarr; Type the combustor cross-sectional geometry e.g., "circular". The default type of the geometry in DARE code is "circular".
 
 ```
-    combCond{4} = 
+    combCond{4} = "...Provide combustor duct profile..."
 ```
 &rarr; Provide the input of the combustor duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
 ```
-    combCond{6} = 
+    combCond{6} = "...Provide path to the molecular weight matrix..."
 ```
 &rarr; Provide the input of the molecular weights data of the species in the Hydrogen-Air combustion e.g., '~\Dependencies\MW_H2_Air.mat'.
 
 ```
-    nozzCond{4} = 
+    nozzCond{3} = "...Provide nozzle duct profile..."
 ```
 &rarr; Provide the input of the nozzle duct profile e.g., '~\Dependencies\area_duct_profile.mat'.
 
