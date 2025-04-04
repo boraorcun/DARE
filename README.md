@@ -208,7 +208,7 @@ In other two examples, an engine having same combustor properties, but undefined
 * ```Examples/Ramjet/1/```: shows the design solution of a ramjet engine with pre-defined nozzle profile which is detailed above.
 * ```Examples/Ramjet/2/```: shows the design solution of a ramjet engine with a pre-defined expansion ratio at the nozzle, with the flow exiting at a pressure 10% higher than the ambient atmospheric pressure. Nozzle divergence angle is defined as 15°.
 
-For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 20km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.15007 to induce thermal choking at the throat of the combustor.
+For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 25km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.15007 to induce thermal choking at the throat of the combustor.
 
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
@@ -225,10 +225,10 @@ For the ramjet and scramjet engine examples for the nozzle with a predefined exp
 | ------------- | ------------- | ------------- |
 | Intake length [m] | 26.32 | 19.96 | 
 | Intake TPR [%] | 96.54 | 86.67 | 
-| Nozzle length [m] | 8.49 | 20.4 |
-| Nozzle exit area [m²] | 36.4 | 137.49 |
-| Uninstalled thrust [kN] | 84.75 | 912.15 |
-| Specific impulse [ks] | 15.4 | 18.72 |
+| Nozzle length [m] | 8.49 | 20.36 |
+| Nozzle exit area [m²] | 36.4 | 136.14 |
+| Uninstalled thrust [kN] | 84.75 | 916.89 |
+| Specific impulse [ks] | 15.4 | 18.82 |
 | Fuel consumption [kg/s] | 0.56 | 4.97 |
 | Mass flow rate of air [kg/s] | 131.6 | 872.39 |
 
