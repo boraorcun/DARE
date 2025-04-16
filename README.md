@@ -167,7 +167,7 @@ Enjoy!
    * ```Functions/entropy_calculation_fun.m```: calculating entropy of each species.
    * ```Functions/specific_heat_calculation_fun.m```: calculating specific heat of each species.
    * ```Functions/geometric_calculation_fun.m```: calculating geometric parameters of the duct, including Hydraulic diameter [m], Wall Perimeter [m], Area Gradient [m].
-   * ```Functions/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [(Jachimowski,1984)](doi:10.1016/0010-2180(84)90029-4).
+   * ```Functions/reaction_rates_calculation_fun.m```: calculating reaction rates for hydrogen-air combustion using detailed kinetics provided in [(Jachimowski,1984)](https://doi:10.1016/0010-2180(84)90029-4).
    * ```Functions/BusemannIntake.m```: calculating intake parameters based on Busemann intake design approach.
    * ```Functions/oblique_angle_calc.m```: calculating leading edge truncation parameters of Busemann intake design approach.
    * ```Functions/ramjet_combustor_nozzle.m```: calculating flow variables and species mass fractions along with combustor and nozzle parts in ramjet operational mode.
