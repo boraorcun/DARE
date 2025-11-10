@@ -1,4 +1,4 @@
-function [nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond)
+function [nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond,choice,pressure_difference)
 
 global Ru engineMode
 
@@ -15,19 +15,8 @@ for m=2:1:row
     area_gradient(m,2) = area_profile_comb_nozzle(m,2) - area_profile_comb_nozzle(m-1,2);
 end
 
-
-nozzle_analysis_options = ["Expansion with the provided area profile", "Perfect expansion"];
-choice = menu('Select an analysis option:', nozzle_analysis_options);
 if choice == 1 && area_profile_comb_nozzle(end,1) < Comb_Length + nozzCond{2}
     error('The length info given in the area profile is not sufficient, please provide the area profile along with the full-lenght, update nozzle and combustor lengths, or select perfect expansion');
-end
-pressure_difference = input('Please enter the desired pressure difference (exit pressure - ambient pressure) in [%] of ambient pressure for designing the nozzle: ');
-if pressure_difference > 0
-    fprintf('You entered a pressure difference of %.2f Pa. This is for underexpanded nozzle design\n', pressure_difference);
-elseif pressure_difference < 0 && pressure_difference > -30
-    fprintf('You entered a pressure difference of %.2f Pa. This is for overexpanded nozzle design\n', pressure_difference);
-elseif pressure_difference <= -30
-    fprintf('For this overexpanded nozzle design, thrust production is not possible according to Sommerfield criteria');
 end
 
 %% CALLING THE CVODE SOLVER
@@ -61,10 +50,11 @@ if strcmp( engineMode, 'RAM' )
     imax = 120000000; % maximum iteration number
     xout = 1 + Comb_Length;
     x = combOut{2}; x0 = Comb_Length;
-    y = combOut{3}; y0 = y;
+    y = combOut{3}; 
+	y(2) = y(2) + 5; % ramjet solutions are valid only with ±5m/s velocity range at the throat of the combustor
+	y0 = y;
     module = 'nozzle';
     CVodeFree;
-    y(2) = y(2) + 5; % ramjet solutions are valid only with ±5m/s velocity range at the throat of the combustor
     CVodeInit(@ramjet_combustor_nozzle, 'BDF', 'Newton', x0, y0, options); % initializing the CVODE solver for the solution of ramjet combustor and nozzle modules
     if choice == 1 && nozzle_key == true
         while iout < imax
@@ -187,7 +177,7 @@ elseif strcmp( engineMode, 'SCRAM' )
         Cp_NO = specific_heat_calculation_fun(y(4),'NO',Ru,MW(11)); % specific heat of NO [kJ/kg/K]
         Cp_HNO = specific_heat_calculation_fun(y(4),'HNO',Ru,MW(12)); % specific heat of HNO [kJ/kg/K]
         Cp_NO2 = specific_heat_calculation_fun(y(4),'NO2',Ru,MW(13)); % specific heat of NO2 [kJ/kg/K]
-        Cp_mixture = Cp_O2 * y(6) + Cp_N2 * y(7) + Cp_H2 * y(8) + Cp_OH * y(9) + Cp_O * y(10) + Cp_H * y(11) + Cp_H2O * y(12) + Cp_HO2 * y(13) + 
+        Cp_mixture = Cp_O2 * y(6) + Cp_N2 * y(7) + Cp_H2 * y(8) + Cp_OH * y(9) + Cp_O * y(10) + Cp_H * y(11) + Cp_H2O * y(12) + Cp_HO2 * y(13) + ...
         Cp_H2O2 * y(14) + Cp_N * y(15) + Cp_NO * y(16) + Cp_HNO * y(17) + Cp_NO2 * y(18);
         Rgas = Ru / y(5);
         Cv_mixture = Cp_mixture - Rgas;
@@ -198,7 +188,7 @@ elseif strcmp( engineMode, 'SCRAM' )
         Mach_Nozzle_Exit = sqrt(((P_Desired_Exit / P0_Combustor_Exit)^(-(Gamma_Mixture - 1)/Gamma_Mixture) - 1) * (2/(Gamma_Mixture - 1)));
         T_Nozzle_Exit = T0_Combustor_Exit * (1 + (Gamma_Mixture - 1)/2 * Mach_Nozzle_Exit * Mach_Nozzle_Exit)^-1;
         Velocity_Nozzle_Exit = Mach_Nozzle_Exit * sqrt(Gamma_Mixture * Rgas * T_Nozzle_Exit);
-        Area_Nozzle_Exit = Comb_Area * (1/Mach_Nozzle_Exit) * (2/(Gamma_Mixture + 1))^((Gamma_Mixture + 1)/(2*(Gamma_Mixture - 1))) * 
+        Area_Nozzle_Exit = Comb_Area * (1/Mach_Nozzle_Exit) * (2/(Gamma_Mixture + 1))^((Gamma_Mixture + 1)/(2*(Gamma_Mixture - 1))) * ...
         (1 + (Gamma_Mixture - 1)/2 * Mach_Nozzle_Exit * Mach_Nozzle_Exit)^((Gamma_Mixture + 1)/(2*(Gamma_Mixture - 1)));
         Combustor_Area_Diameter = sqrt(4 * Comb_Area / 3.14);
         Nozzle_Area_Diameter = sqrt(4 * Area_Nozzle_Exit / 3.14);
@@ -208,13 +198,19 @@ elseif strcmp( engineMode, 'SCRAM' )
     end
 end
 %% Record output
-
 nozzOut{1} = choice;
 nozzOut{2} = x;
 nozzOut{3} = y;
-nozzOut{4} = P_Desired_Exit;
-nozzOut{5} = T_Nozzle_Exit;
-nozzOut{6} = Velocity_Nozzle_Exit;
-nozzOut{7} = Area_Nozzle_Exit;
+if choice == 1
+    nozzOut{4} = y(3);
+    nozzOut{5} = y(4);
+    nozzOut{6} = y(5);
+    nozzOut{7} = y(19);
+elseif choice == 2
+    nozzOut{4} = P_Desired_Exit;
+    nozzOut{5} = T_Nozzle_Exit;
+    nozzOut{6} = Velocity_Nozzle_Exit;
+    nozzOut{7} = Area_Nozzle_Exit;
+end
 
 return
