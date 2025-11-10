@@ -1,8 +1,9 @@
-function[omega, reaction_key] = reaction_rates_calculation_fun(reaction_key, Comb_Length, Y, x, MW, s, h)
+function[omega, reaction_key] = reaction_rates_calculation_fun(reaction_key_in, Comb_Length, Y, x, MW, s, h)
+    global reaction_key hydrogen_mfr h2_production_check h2_production_counter;
+    reaction_key = reaction_key_in;
     Ru = 8.314; % universal gas constant [kJ/mol-K]    
     Ru_cal = 1.987; % universal gas constant [cal/mol-K]
     p0 = 101325; % reference pressure [Pa]
-    global reaction_key hydrogen_mfr h2_production_check h2_production_counter;
     %% FOR PREVENTING HYDROGEN PRODUCTION (Reaction must stop once the system reaches equilibrium state)
     hydrogen_previous = hydrogen_mfr; % uploading previous hydrogen mass fraction
 
@@ -208,4 +209,5 @@ function[omega, reaction_key] = reaction_rates_calculation_fun(reaction_key, Com
     %% OUTPUTS
     omega = [omega_O2, omega_N2, omega_H2, omega_OH, omega_O, omega_H, omega_H2O, omega_HO2, omega_H2O2, omega_N, omega_NO, omega_HNO, omega_NO2];
     reaction_key = reaction_key;
+
 end
