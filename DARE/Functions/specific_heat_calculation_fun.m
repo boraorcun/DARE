@@ -1,6 +1,8 @@
 function[Cp] = specific_heat_calculation_fun(T,specie,Ru,MW_specie)
-    fopen all;
-    fclose all;
+    fIDs = openedFiles;
+    if ~isempty(fIDs)
+        fclose all;
+    end
     R = Ru/MW_specie;
     fileIDE = fopen('janaf_table.txt');
     Msh = textscan(fileIDE,'%s %s %s %s %s','headerlines',0);
