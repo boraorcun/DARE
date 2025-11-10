@@ -51,7 +51,7 @@ if strcmp( engineMode, 'RAM' )
     xout = 1 + Comb_Length;
     x = combOut{2}; x0 = Comb_Length;
     y = combOut{3}; 
-	y(2) = y(2) + 10; % ramjet solutions are valid only with ±10m/s velocity range at the throat of the combustor
+	y(2) = y(2) + 5; % ramjet solutions are valid only with ±5m/s velocity range at the throat of the combustor
 	y0 = y;
     module = 'nozzle';
     CVodeFree;
@@ -214,4 +214,5 @@ elseif choice == 2
 end
 
 return
+
 
