@@ -179,9 +179,6 @@ elseif strcmp( engineMode, 'SCRAM' )
             iout = iout+1; % increasing the number of iteration
         end
         xout = Comb_Length;
-
-        plot(x,y(4),'b .','MarkerSize',10)
-        pause(1e-5)
     end
 end
 
