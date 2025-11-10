@@ -66,6 +66,19 @@ combCond{6} = './Dependencies/MW_H2_Air.mat'; % Path to the molecular weight mat
 
 % Nozzle expansion ratio
 
+nozzle_analysis_options = ["Expansion with the provided area profile", "Perfect expansion"];
+choice = menu('Select an analysis option for the nozzle component:', nozzle_analysis_options);
+pressure_difference=0;
+if choice == 2 
+    pressure_difference = input('Please enter the desired pressure difference (exit pressure - ambient pressure) in [%] for designing the nozzle: ');
+    if pressure_difference > 0
+        fprintf('You entered a pressure difference of %.2f%%. This is for underexpanded nozzle design.\n', pressure_difference);
+    elseif pressure_difference < 0 && pressure_difference > -30
+        fprintf('You entered a pressure difference of %.2f%%. This is for overexpanded nozzle design.\n', pressure_difference);
+    elseif pressure_difference < -30
+        fprintf('For this overexpanded nozzle design, thrust production is not possible according to Sommerfield criterias.\n');
+    end
+end
 nozzCond{1} = 20; % Nozzle Length [m]
 nozzCond{2} = 0.5; % Must be higher than 30% (NER=0.3) according to Summerfield (Fernandez et al., 2013)
 nozzCond{3} = './Dependencies/area_duct_profile.mat'; % Nozzle duct profile
@@ -86,7 +99,7 @@ nozzCond{4} = 15; % Nozzle divergence angle (for conical nozzles and must be def
 
 % Nozzle Module
 
-[nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond);
+[nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond,choice,pressure_difference);
 
 
 %% Performance Parameters
@@ -95,3 +108,4 @@ nozzCond{4} = 15; % Nozzle divergence angle (for conical nozzles and must be def
 
 perfModule(nozzOut,nozzCond,combCond,flightComb,atmCond)
     
+
