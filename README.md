@@ -210,6 +210,10 @@ In other two examples, an engine having same combustor properties, but undefined
 
 For these examples, the flight conditions for scramjet engine operation were assumed to be a Mach number of 6 and an altitude of 25km, while a Mach number of 4 and an altitude of 25km were selected for ramjet engine operation. In the scramjet engine design examples, the intake exit Mach number and truncation angle were chosen as 2 and 6°, respectively, whereas for the ramjet examples, intake exit Mach number becomes 0.5 after the presence of the normal shock at the isolator. The equivalence ratio was set to 0.2 for scramjet operation, while for the ramjet, it was optimized to 0.15007 to induce thermal choking at the throat of the combustor.
 
+Each example can be run individually by executing the DARE.m file inside its folder, or all examples can be run together using tests/testDARE_Examples.m. This script automates the execution of all examples and writes the performance outputs upon completion.
+
+To use it, set the tests folder as the current working directory, open testDARE_Examples.m in the Editor, and enter the following command in the Command Window: results = runtests('testDARE_Examples');
+
 For the ramjet and scramjet engine examples with a predefined nozzle profile, the calculated performance values and design parameters are expected to be as follows:
 | Calculated Parameters | Ramjet | Scramjet |
 | ------------- | ------------- | ------------- |
