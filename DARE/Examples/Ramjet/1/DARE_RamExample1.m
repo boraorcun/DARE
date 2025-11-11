@@ -68,7 +68,7 @@ combCond{4} = '../../../Dependencies/area_duct_profile.mat'; % Combustor duct pr
 combCond{5} = 0.15007; % Equivalence Ratio [-]
 combCond{6} = '../../../Dependencies/MW_H2_Air.mat'; % Path to the molecular weight matrix
 
-% Nozzle expansion ratio
+% Nozzle expansion ratio and design conditions
 choice = 1;
 pressure_difference = 0;
 nozzCond{1} = 20; % Nozzle Length [m]
@@ -100,4 +100,5 @@ nozzCond{4} = 15; % Nozzle divergence angle (for conical nozzles and must be def
 
 perfModule(nozzOut,nozzCond,combCond,flightComb,atmCond)
     
+
 
