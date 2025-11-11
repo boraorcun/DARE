@@ -68,8 +68,9 @@ combCond{4} = '../../../Dependencies/area_duct_profile.mat'; % Combustor duct pr
 combCond{5} = 0.15007; % Equivalence Ratio [-]
 combCond{6} = '../../../Dependencies/MW_H2_Air.mat'; % Path to the molecular weight matrix
 
-% Nozzle expansion ratio
-
+% Nozzle expansion ratio and design conditions
+choice = 2;
+pressure_difference = 10;
 nozzCond{1} = 20; % Nozzle Length [m]
 nozzCond{2} = 0.5; % Must be higher than 30% (NER=0.3) according to Summerfield et al. (@@)
 nozzCond{3} = '../../../Dependencies/area_duct_profile.mat'; % Nozzle duct profile
@@ -92,7 +93,7 @@ nozzCond{4} = 15; % Nozzle divergence angle (for conical nozzles and must be def
 
 % Nozzle Module
 
-[nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond);
+[nozzOut] = nozzleModule(combOut,nozzCond,combCond,atmCond,choice,pressure_difference);
 
 
 %% Performance Parameters
@@ -101,3 +102,4 @@ nozzCond{4} = 15; % Nozzle divergence angle (for conical nozzles and must be def
 
 perfModule(nozzOut,nozzCond,combCond,flightComb,atmCond)
     
+
